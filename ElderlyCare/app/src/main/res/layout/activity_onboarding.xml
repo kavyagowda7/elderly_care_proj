@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnboardingActivity">
+
+    <include
+        layout="@layout/header_back"
+        android:id="@+id/headerBack" />
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/onboardingViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutOnboardingIndicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonOnboardingAction"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"/>
+
+
+
+    <Button
+        android:id="@+id/buttonOnboardingAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Next"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"/>
+    <TextView
+        android:id="@+id/textSkip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="28dp"
+    android:layout_marginEnd="23dp"
+    android:textSize="16dp"
+        android:textStyle="bold"
+    android:text="SKIP"/>
+
+</RelativeLayout>

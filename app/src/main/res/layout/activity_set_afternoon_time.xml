@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_gradient"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/header_back"
+        android:id="@+id/headerBack" />
+    <!-- Step indicator -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+
+        <View
+            android:id="@+id/step1"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/progress_dot_inactive"
+            android:layout_margin="4dp" />
+
+        <View
+            android:id="@+id/step2"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/progress_dot_active"
+            android:layout_margin="4dp" />
+
+        <View
+            android:id="@+id/step3"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/progress_dot_inactive"
+            android:layout_margin="4dp" />
+    </LinearLayout>
+
+    <!-- Emoji -->
+    <TextView
+        android:text="🌤"
+        android:textSize="48sp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center" />
+
+    <!-- Title -->
+    <TextView
+        android:text="At what time do you take your med at afternoon?"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Time Picker -->
+    <TimePicker
+        android:id="@+id/timePickerAfternoon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MaterialComponents.TimePicker" />
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/btnNext"
+        android:text="Next"
+        android:background="@drawable/btn_gradient_primary"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

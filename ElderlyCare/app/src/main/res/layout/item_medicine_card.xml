@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:clipToPadding="false"
+    android:elevation="3dp"
+    android:background="#FFFFFF"
+    android:radius="18dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- HEADER STRIP -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#E9F7F3"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/tvMedName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aspirin (Oral Pill)"
+                android:textColor="#1A1A1A"
+                android:textStyle="bold"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <!-- MAIN CONTENT -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:layout_height="wrap_content">
+
+            <!-- Dosage description -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/ic_clock"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/tvDosage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 capsule, 3 times a day"
+                    android:textColor="#D32F2F"
+                    android:textSize="14sp"
+                    android:layout_marginStart="6dp"/>
+            </LinearLayout>
+
+            <!-- Timings bold -->
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="07:00, 12:00, 18:00"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#1A1A1A"
+                android:layout_marginTop="6dp" />
+
+            <!-- Frequency line -->
+            <TextView
+                android:id="@+id/tvFrequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily, ongoing"
+                android:textColor="#4A8DAE"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp"/>
+
+            <!-- Start Date -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <ImageView
+                    android:src="@drawable/ic_calender"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/tvStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From: 2022-02-10 12:08"
+                    android:textColor="#333"
+                    android:textSize="14sp"
+                    android:layout_marginStart="6dp"/>
+            </LinearLayout>
+
+            <!-- PROGRESS BAR ONLY -->
+            <ProgressBar
+                android:id="@+id/progressDays"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_marginTop="14dp"
+                android:progressTint="#4CAF50"
+                android:backgroundTint="#C8E6C9"
+                android:max="100" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

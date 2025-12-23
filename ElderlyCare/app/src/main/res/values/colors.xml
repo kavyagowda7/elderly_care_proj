@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+        <!-- 🎨 Brand Primary Colors -->
+        <color name="purple_100">#F3E8FF</color>
+        <color name="purple_200">#D8B4FE</color>
+        <color name="purple_300">#C084FC</color>
+        <color name="purple_400">#A855F7</color>
+        <color name="purple_500">#9C27B0</color> <!-- Core Brand -->
+        <color name="purple_600">#7E22CE</color>
+        <color name="purple_700">#6B21A8</color>
+        <color name="purple_800">#581C87</color>
+
+        <!-- 💙 Secondary Colors (used for buttons, gradients) -->
+        <color name="blue_100">#E0F2FE</color>
+        <color name="blue_200">#BAE6FD</color>
+        <color name="blue_300">#7DD3FC</color>
+        <color name="blue_400">#38BDF8</color>
+        <color name="blue_500">#2AB1FF</color> <!-- Login / Doctor Accent -->
+        <color name="blue_600">#0284C7</color>
+
+        <!-- 💚 Support Colors (for Family, Success states) -->
+        <color name="green_100">#D1FAE5</color>
+        <color name="green_200">#A7F3D0</color>
+        <color name="green_300">#6EE7B7</color>
+        <color name="green_400">#34D399</color>
+        <color name="green_500">#38D39F</color> <!-- Family Role -->
+        <color name="green_600">#059669</color>
+
+        <!-- 💜 Elder Role Accent -->
+        <color name="lavender_100">#F5E1FF</color>
+        <color name="lavender_300">#E1BEE7</color>
+        <color name="lavender_500">#B66CFF</color>
+
+        <!-- ❤️ Alerts / Errors -->
+        <color name="red_400">#FB7185</color>
+        <color name="red_500">#EF4444</color>
+
+        <!-- 🩶 Neutrals & Text Colors -->
+        <color name="text_primary">#212121</color>
+        <color name="text_secondary">#666666</color>
+        <color name="text_hint">#999999</color>
+        <color name="divider_color">#E0E0E0</color>
+
+        <!-- 🩵 Background Colors -->
+        <color name="background_light">#FFFFFF</color>
+        <color name="background_grey">#F7F7FB</color>
+        <color name="background_gradient_start">#F3E8FF</color>
+        <color name="background_gradient_end">#FFFFFF</color>
+
+        <!-- 🌅 Gradients -->
+        <color name="gradient_start">#9C27B0</color> <!-- purple -->
+        <color name="gradient_center">#6B21A8</color> <!-- deep purple -->
+        <color name="gradient_end">#2AB1FF</color> <!-- light blue -->
+
+        <!-- 🌕 Shadows -->
+        <color name="shadow_soft">#1A000000</color> <!-- soft black shadow -->
+
+        <!-- ⚪ Generic UI Colors -->
+        <color name="button_primary">@color/purple_500</color>
+        <color name="button_secondary">@color/blue_400</color>
+        <color name="card_background">@color/background_light</color>
+
+    <color name="gray_light">#E9E9F3</color>
+
+
+
+
+</resources>

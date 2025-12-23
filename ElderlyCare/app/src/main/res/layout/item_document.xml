@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_report_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:text="Chest X-ray"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#0A4A42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Category -->
+    <TextView
+        android:id="@+id/tvCategory"
+        android:text="Diagnostic Imaging"
+        android:textSize="13sp"
+        android:textColor="#4A8F84"
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Row: Thumbnail + File name + More badge + Open icon -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Thumbnail -->
+        <ImageView
+            android:id="@+id/iv_attachment_thumb"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_attachment"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/app_name"/>
+
+        <!-- File name -->
+        <TextView
+            android:id="@+id/tvFileName"
+            android:text="case6_001.dcm"
+            android:textSize="13sp"
+            android:textColor="#333"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <!-- +N badge (MULTIPLE ATTACHMENTS) -->
+        <TextView
+            android:id="@+id/tvMoreBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:background="@drawable/bg_round_green"
+            android:text="+3"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"/> <!-- default hidden -->
+
+        <!-- Open icon -->
+        <ImageView
+            android:id="@+id/ivOpen"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_open"
+            android:contentDescription="@string/app_name"/>
+    </LinearLayout>
+
+    <!-- Health Tag -->
+    <TextView
+        android:id="@+id/tvTag"
+        android:text="Heart disease"
+        android:background="@drawable/tag_bg"
+        android:padding="6dp"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:textColor="#D92E6A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

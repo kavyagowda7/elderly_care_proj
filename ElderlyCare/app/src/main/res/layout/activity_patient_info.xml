@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_gradient">
+
+    <!-- ✅ Only one direct child -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Title -->
+        <TextView
+            android:text="Patient Information"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/purple_700"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:text="Please fill in your details"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Card -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_card_bg"
+            android:padding="20dp"
+            android:elevation="4dp">
+
+            <!-- Name -->
+            <EditText
+                android:id="@+id/nameInput"
+                android:hint="Enter your full name"
+                android:background="@drawable/input_field_bg"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Age + Gender -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/ageInput"
+                    android:hint="Age"
+                    android:background="@drawable/input_field_bg"
+                    android:padding="12dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:inputType="number" />
+
+                <Spinner
+                    android:id="@+id/genderSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_field_bg"
+                    android:spinnerMode="dropdown"
+                    android:padding="12dp"
+                    android:entries="@array/gender_array" />
+            </LinearLayout>
+
+            <!-- DOB -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/dobInput"
+                android:hint="Select your date of birth"
+                android:background="@drawable/input_field_bg"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"
+                android:drawableEnd="@drawable/ic_calender"
+                android:drawablePadding="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- City -->
+            <EditText
+                android:id="@+id/cityInput"
+                android:hint="Enter your city"
+                android:background="@drawable/input_field_bg"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Pincode -->
+            <EditText
+                android:id="@+id/pincodeInput"
+                android:hint="Enter pincode"
+                android:background="@drawable/input_field_bg"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 📞 Phone Number -->
+            <EditText
+                android:id="@+id/phoneInput"
+                android:hint="Enter phone number"
+                android:background="@drawable/input_field_bg"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Continue -->
+            <Button
+                android:id="@+id/continueButton"
+                android:text="Continue"
+                android:background="@drawable/btn_gradient_primary"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:padding="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

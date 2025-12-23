@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FB"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 🔔 Notifications Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@drawable/rounded_white_card"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Notifications"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Push Notifications -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Push Notifications" />
+
+                <Switch
+                    android:id="@+id/switchPush"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Email Alerts -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Email Alerts" />
+
+                <Switch
+                    android:id="@+id/switchEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Sound -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Sound" />
+
+                <Switch
+                    android:id="@+id/switchSound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ⏳ Working Hours Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_white_card"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Working Hours"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Time Row -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <!-- Start Time -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Start Time"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="5dp" />
+
+                    <TimePicker
+                        android:id="@+id/startTimePicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/white_rounded_box"
+                        android:timePickerMode="spinner" />
+                </LinearLayout>
+
+                <!-- End Time -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:text="End Time"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="5dp" />
+
+                    <TimePicker
+                        android:id="@+id/endTimePicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/white_rounded_box"
+                        android:timePickerMode="spinner" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Working Days -->
+            <TextView
+                android:text="Working Days"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:id="@+id/daysContainer"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="start">
+
+
+            <!-- Day Buttons -->
+                <ToggleButton
+                    android:id="@+id/dayMon"
+                    android:textOn="Mon"
+                    android:textOff="Mon"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/DayToggleButton" />
+
+                <ToggleButton
+                    android:id="@+id/dayTue"
+                    android:textOn="Tue"
+                    android:textOff="Tue"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/DayToggleButton" />
+
+                <ToggleButton
+                    android:id="@+id/dayWed"
+                    android:textOn="Wed"
+                    android:textOff="Wed"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/DayToggleButton" />
+
+                <ToggleButton
+                    android:id="@+id/dayThu"
+                    android:textOn="Thu"
+                    android:textOff="Thu"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/DayToggleButton" />
+
+                <ToggleButton
+                    android:id="@+id/dayFri"
+                    android:textOn="Fri"
+                    android:textOff="Fri"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/DayToggleButton" />
+
+                <ToggleButton
+                    android:id="@+id/daySat"
+                    android:textOn="Sat"
+                    android:textOff="Sat"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/DayToggleButton" />
+
+                <ToggleButton
+                    android:id="@+id/daySun"
+                    android:textOn="Sun"
+                    android:textOff="Sun"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/DayToggleButton" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnUpdateHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Schedule"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#00C853"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+
+        <!-- 🔒 Security Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_white_card"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Security"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/changePassword"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Change Password"
+                android:padding="10dp"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/twoFactor"
+                android:text="Two-Factor Authentication"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- 🌐 Language -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@drawable/rounded_white_card"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/languageRegion"
+                android:text="Language and Region"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/appearance"
+                android:text="Appearance"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

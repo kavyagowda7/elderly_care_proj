@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/rounded_white_card"
+    android:layout_marginBottom="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDoctorName"
+        android:text="Dr. DoctorName"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/tvClinicAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#666"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginTop="4dp"/>
+
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:text="Date"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="#555"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:text="Time"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="#555"/>
+
+    <TextView
+        android:id="@+id/tvType"
+        android:text="In-Person"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="#7D3CFF"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:text="Pending"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:padding="6dp"
+        android:textColor="#ffca3a"
+
+        android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnViewDetails"
+            android:text="View Details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnReschedule"
+            android:text="Reschedule"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

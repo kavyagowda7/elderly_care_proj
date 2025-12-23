@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_gradient"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Step Indicator -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+        <View
+            android:id="@+id/step1"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/progress_dot_active"
+            android:layout_margin="4dp" />
+
+        <View
+            android:id="@+id/step2"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/progress_dot_active"
+            android:layout_margin="4dp" />
+
+        <View
+            android:id="@+id/step3"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/progress_dot_active"
+            android:layout_margin="4dp" />
+
+        <View
+            android:id="@+id/step4"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/progress_dot_inactive"
+            android:layout_margin="4dp" />
+    </LinearLayout>
+
+    <!-- Title -->
+    <TextView
+        android:text="ALARM TYPE"
+        android:textColor="@color/purple_700"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:text="Select your reminder type"
+        android:textColor="@color/text_secondary"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Radio Buttons -->
+    <RadioGroup
+        android:id="@+id/alarmTypeGroup"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbFocused"
+            android:text="Focused"
+            android:checked="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="16dp"/>
+
+        <RadioButton
+            android:id="@+id/rbLight"
+            android:text="Light"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"/>
+    </RadioGroup>
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/btnNext"
+        android:text="Next"
+        android:background="@drawable/btn_gradient_primary"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

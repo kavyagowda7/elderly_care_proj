@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9FB"
+    tools:context=".SettingsActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingVertical="12dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_right_arrow"
+                app:tint="@color/black" />
+
+            <TextView
+                android:text="Settings"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- ACCOUNT & SECURITY -->
+        <TextView
+            android:text="Account and Security"
+            android:textStyle="bold"
+            android:textColor="#888888"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/changePassword"
+            style="@style/SettingsRow"
+            android:background="@drawable/white_card_bg">
+
+            <ImageView
+                android:src="@drawable/ic_lock"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:tint="@color/purple_700"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:text="Change Password"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/SettingsText" />
+
+            <ImageView
+                android:src="@drawable/ic_right_arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/managePrivacy"
+            style="@style/SettingsRow"
+            android:background="@drawable/white_card_bg">
+
+            <ImageView
+                android:src="@drawable/ic_privacy"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:tint="@color/purple_700"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:text="Manage Privacy"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/SettingsText" />
+
+            <ImageView
+                android:src="@drawable/ic_right_arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/connectedCaregivers"
+            style="@style/SettingsRow"
+            android:background="@drawable/white_card_bg">
+
+            <ImageView
+                android:src="@drawable/ic_people"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:tint="@color/purple_700"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:text="Connected Caregivers"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/SettingsText" />
+
+            <ImageView
+                android:src="@drawable/ic_right_arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end" />
+        </LinearLayout>
+
+        <!-- PREFERENCES -->
+        <TextView
+            android:text="Preferences"
+            android:textStyle="bold"
+            android:textColor="#888888"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Notification Tone -->
+        <LinearLayout
+            android:id="@+id/notificationTone"
+            style="@style/SettingsRow"
+            android:background="@drawable/white_card_bg">
+
+            <ImageView
+                android:src="@drawable/ic_bell"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:tint="@color/purple_700"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:text="Notification Tone"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/SettingsText" />
+
+            <ImageView
+                android:src="@drawable/ic_right_arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end" />
+        </LinearLayout>
+
+        <!-- Recurring Reminder -->
+        <LinearLayout
+            android:id="@+id/recurringReminder"
+            style="@style/SettingsRow"
+            android:background="@drawable/white_card_bg">
+
+            <ImageView
+                android:src="@drawable/ic_repeat"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:tint="@color/purple_700"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:text="Recurring Reminder"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/SettingsText" />
+
+            <Switch
+                android:id="@+id/switchRecurring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_gravity="end" />
+        </LinearLayout>
+
+        <!-- SUPPORT -->
+        <TextView
+            android:text="Support"
+            android:textStyle="bold"
+            android:textColor="#888888"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/helpFaq"
+            style="@style/SettingsRow"
+            android:background="@drawable/white_card_bg">
+
+            <ImageView
+                android:src="@drawable/ic_help"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:tint="@color/purple_700"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:text="Help and FAQ"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/SettingsText" />
+
+            <ImageView
+                android:src="@drawable/ic_right_arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contactSupport"
+            style="@style/SettingsRow"
+            android:background="@drawable/white_card_bg">
+
+            <ImageView
+                android:src="@drawable/ic_email"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:tint="@color/purple_700"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:text="Contact Support"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/SettingsText" />
+
+            <ImageView
+                android:src="@drawable/ic_right_arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

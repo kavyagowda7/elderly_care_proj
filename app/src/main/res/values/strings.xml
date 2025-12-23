@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ElderlyCare</string>
+
+    <string-array name="user_roles">
+        <item>Elder</item>
+        <item>Family</item>
+        <item>Doctor</item>
+    </string-array>
+
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Your OpenRouter API key (value only, name stays simple) -->
+    <string name="openrouter_api_key">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</string>
+</resources>

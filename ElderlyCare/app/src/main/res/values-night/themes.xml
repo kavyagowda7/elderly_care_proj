@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Dark theme for ElderlyCare -->
+    <style name="Base.Theme.ElderlyCare" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_300</item>
+        <item name="colorPrimaryContainer">@color/purple_800</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/blue_300</item>
+        <item name="android:statusBarColor">@color/purple_700</item>
+        <item name="android:navigationBarColor">@color/purple_800</item>
+        <item name="android:windowBackground">#121212</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Theme.ElderlyCare" parent="Base.Theme.ElderlyCare" />
+</resources>

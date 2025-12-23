@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6FF">
+
+    <!-- Top Gradient Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/top_blue_purple_gradient"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:src="@drawable/ic_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:tint="#ffffff"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="Appointments"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <!-- Book New Appointment Button -->
+    <Button
+        android:id="@+id/btnBookNew"
+        android:text="  +  Book New Appointment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="12dp"
+        android:background="@drawable/blue_button_round"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:layout_margin="16dp"/>
+
+    <!-- Section Title -->
+    <TextView
+        android:id="@+id/tvUpcomingLabel"
+        android:text="Upcoming Appointments"
+        android:textSize="16sp"
+        android:textColor="#333"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAppointments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="40dp"
+        android:clipToPadding="false"/>
+
+</LinearLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Back + Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:src="@drawable/ic_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Back"
+                app:tint="@color/purple_700" />
+
+            <TextView
+                android:text="Select Reminder Tone"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Tone List -->
+        <RadioGroup
+            android:id="@+id/toneGroup"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Gentle Alarm -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/white_card_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbGentle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gentle Alarm"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:buttonTint="@color/purple_700" />
+
+                <ImageView
+                    android:id="@+id/playGentle"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_play"
+                    android:background="@drawable/round_button_bg"
+                    app:tint="@color/purple_700" />
+            </LinearLayout>
+
+            <!-- Classic Bell -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/white_card_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbClassic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Classic Bell"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:buttonTint="@color/purple_700" />
+
+                <ImageView
+                    android:id="@+id/playClassic"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_play"
+                    android:background="@drawable/round_button_bg"
+                    app:tint="@color/purple_700" />
+            </LinearLayout>
+
+            <!-- Harp -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/white_card_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbHarp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Harp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:buttonTint="@color/purple_700" />
+
+                <ImageView
+                    android:id="@+id/playHarp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_play"
+                    android:background="@drawable/round_button_bg"
+                    app:tint="@color/purple_700" />
+            </LinearLayout>
+
+            <!-- Digital Chime -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/white_card_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbChime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Digital Chime"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:buttonTint="@color/purple_700" />
+
+                <ImageView
+                    android:id="@+id/playChime"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_play"
+                    android:background="@drawable/round_button_bg"
+                    app:tint="@color/purple_700" />
+            </LinearLayout>
+
+            <!-- Vibration -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/white_card_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbVibration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Vibration Only"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:buttonTint="@color/purple_700" />
+
+                <ImageView
+                    android:id="@+id/playVibration"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_play"
+                    android:background="@drawable/round_button_bg"
+                    app:tint="@color/purple_700" />
+            </LinearLayout>
+
+            <!-- Custom -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/white_card_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbCustom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Choose from My Music"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:buttonTint="@color/purple_700" />
+
+                <ImageView
+                    android:id="@+id/playCustom"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_play"
+                    android:background="@drawable/round_button_bg"
+                    app:tint="@color/purple_700" />
+            </LinearLayout>
+        </RadioGroup>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnFinish"
+            android:text="Save Selection"
+            android:background="@drawable/btn_gradient_primary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

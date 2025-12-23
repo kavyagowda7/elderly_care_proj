@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FB">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Top header -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Settings"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000" />
+        </LinearLayout>
+
+        <!-- Profile Info Card -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/rounded_white_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/ic_profile_blue"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:text="Profile Information"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView android:text="Full Name"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="20dp" />
+            <EditText
+                android:id="@+id/edtName"
+                android:background="@drawable/edittext_background"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <TextView android:text="Specialty"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp" />
+            <EditText
+                android:id="@+id/edtSpecialty"
+                android:background="@drawable/edittext_background"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <TextView android:text="License Number"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp" />
+            <EditText
+                android:id="@+id/edtLicense"
+                android:background="@drawable/edittext_background"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <TextView android:text="Email"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp" />
+            <EditText
+                android:id="@+id/edtEmail"
+                android:background="@drawable/edittext_background"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <TextView android:text="Phone"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp" />
+            <EditText
+                android:id="@+id/edtPhone"
+                android:background="@drawable/edittext_background"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:text="Update Profile"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#4A3E9D"
+                android:textColor="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

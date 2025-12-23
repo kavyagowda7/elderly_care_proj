@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/medicine_card_bg"
+    android:elevation="6dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Medication"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:src="@drawable/ic_delete"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:padding="4dp" />
+    </LinearLayout>
+
+    <!-- Name -->
+    <EditText
+        android:id="@+id/etMedicineName"
+        android:hint="Medicine name"
+        android:padding="8dp"
+        android:background="@drawable/edittext_background"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Dosage -->
+    <EditText
+        android:id="@+id/etDosage"
+        android:hint="Dosage (e.g., 500 mg)"
+        android:padding="8dp"
+        android:background="@drawable/edittext_background"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Timing -->
+    <EditText
+        android:id="@+id/etTimings"
+        android:hint="Timing / Frequency (e.g., 1-0-1, Morning)"
+        android:padding="8dp"
+        android:background="@drawable/edittext_background"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Duration -->
+    <EditText
+        android:id="@+id/etDuration"
+        android:hint="Duration (e.g., 5 days)"
+        android:padding="8dp"
+        android:background="@drawable/edittext_background"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

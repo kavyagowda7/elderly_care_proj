@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F3F9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_height="wrap_content">
+
+        <!-- Header -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:src="@drawable/ic_back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:tint="#3F3254" />
+
+            <TextView
+                android:id="@+id/tvTitleHeader"
+                android:text="Document"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#3F3254"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/btnSaveDocument"
+                android:src="@drawable/ic_tick"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/btn_gradient_primary"
+                android:padding="10dp"
+                app:tint="@android:color/white"/>
+        </LinearLayout>
+
+        <!-- Date -->
+        <TextView
+            android:text="Date"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="#3F3254"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:id="@+id/datePickerLayout"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:background="@drawable/rounded_white_card"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="48dp"
+            android:layout_marginTop="6dp">
+
+            <ImageView
+                android:src="@drawable/ic_calender"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:tint="@color/purple_500"/>
+
+            <TextView
+                android:id="@+id/tvSelectedDate"
+                android:text="05/12/2025"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textColor="#3F3254" />
+        </LinearLayout>
+
+        <!-- Health Issues -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Health issues"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#3F3254"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/btnAddHealthTag"
+                android:src="@drawable/ic_add"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:tint="@color/purple_500"/>
+        </LinearLayout>
+
+        <!-- FIXED: removed invalid wrapSelectorWheel -->
+        <LinearLayout
+            android:id="@+id/healthTagContainer"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <!-- Document type -->
+        <TextView
+            android:text="Document type"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="#3F3254"
+            android:layout_marginTop="18dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerDocType"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/rounded_white_card"/>
+
+        <!-- Title -->
+        <TextView
+            android:text="Title"
+            android:layout_marginTop="18dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="#3F3254"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/rounded_white_card"
+            android:hint="Enter document title"
+            android:textColorHint="#8A809A"
+            android:textColor="#3F3254"
+            android:maxLength="80"
+            android:padding="10dp" />
+
+        <!-- Notes -->
+        <TextView
+            android:text="Notes"
+            android:layout_marginTop="18dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="#3F3254"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/etNotes"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/rounded_white_card"
+            android:gravity="top"
+            android:padding="12dp"
+            android:maxLength="500"
+            android:textColorHint="#8A809A"
+            android:textColor="#3F3254"
+            android:hint="Add notes (optional)" />
+
+        <!-- Attachment -->
+        <TextView
+            android:text="Attachment"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="#3F3254"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnAttachFile"
+                android:text="Attach file"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_gradient_primary"
+                android:textColor="@android:color/white"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btnAttachPhoto"
+                android:text="Attach photo"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/btn_gradient_primary"
+                android:textColor="@android:color/white"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSelectedFile"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="#8A809A"
+            android:text="No file selected" />
+
+    </LinearLayout>
+</ScrollView>

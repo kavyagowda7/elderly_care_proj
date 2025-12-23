@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F7FF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Screen Title -->
+        <TextView
+            android:id="@+id/title"
+            android:text="Doctor Registration"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Please fill in your professional details"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="#777"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Card Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/white_card_bg"
+            android:padding="20dp">
+
+            <!-- Section: Personal Info -->
+            <TextView
+                android:text="Personal Information"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginBottom="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView android:text="Full Name" android:textColor="#444"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edt_fullname"
+                android:hint="Dr. John Smith"
+                android:background="@drawable/rounded_input"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView android:text="Age"
+                        android:textColor="#444"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                    <EditText
+                        android:id="@+id/edt_age"
+                        android:hint="45"
+                        android:inputType="number"
+                        android:background="@drawable/rounded_input"
+                        android:padding="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <Space android:layout_width="10dp" android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView android:text="Specialist"
+                        android:textColor="#444"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                    <EditText
+                        android:id="@+id/edt_specialist"
+                        android:hint="Cardiologist"
+                        android:background="@drawable/rounded_input"
+                        android:padding="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:background="#DADADA"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!-- Home Address -->
+            <TextView android:text="Home Address"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+            <TextView android:text="City"
+                android:textColor="#444"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+            <EditText
+                android:id="@+id/edt_home_city"
+                android:hint="New York"
+                android:background="@drawable/rounded_input"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView android:text="Pincode"
+                android:layout_marginTop="10dp"
+                android:textColor="#444"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edt_home_pincode"
+                android:hint="10001"
+                android:inputType="number"
+                android:background="@drawable/rounded_input"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Divider -->
+            <View
+                android:background="#DADADA"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!-- Clinic Address -->
+            <TextView android:text="Clinic Address"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+            <TextView android:text="Address"
+                android:textColor="#444"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+            <EditText
+                android:id="@+id/edt_clinic_address"
+                android:hint="123 Medical Center, Suite 456"
+                android:background="@drawable/rounded_input"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView android:text="City"
+                android:layout_marginTop="10dp"
+                android:textColor="#444"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+            <EditText
+                android:id="@+id/edt_clinic_city"
+                android:hint="New York"
+                android:background="@drawable/rounded_input"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView android:text="Pincode"
+                android:layout_marginTop="10dp"
+                android:textColor="#444"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+            <EditText
+                android:id="@+id/edt_clinic_pincode"
+                android:hint="10001"
+                android:inputType="number"
+                android:background="@drawable/rounded_input"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/btn_submit"
+                android:text="Complete Registration"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/blue_gradient"
+                android:padding="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
