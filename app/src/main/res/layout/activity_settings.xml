@@ -51,7 +51,9 @@
         <LinearLayout
             android:id="@+id/changePassword"
             style="@style/SettingsRow"
-            android:background="@drawable/white_card_bg">
+            android:background="@drawable/white_card_bg"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
 
             <ImageView
                 android:src="@drawable/ic_lock"
@@ -76,7 +78,9 @@
         <LinearLayout
             android:id="@+id/managePrivacy"
             style="@style/SettingsRow"
-            android:background="@drawable/white_card_bg">
+            android:background="@drawable/white_card_bg"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
 
             <ImageView
                 android:src="@drawable/ic_privacy"
@@ -101,7 +105,9 @@
         <LinearLayout
             android:id="@+id/connectedCaregivers"
             style="@style/SettingsRow"
-            android:background="@drawable/white_card_bg">
+            android:background="@drawable/white_card_bg"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
 
             <ImageView
                 android:src="@drawable/ic_people"
@@ -138,7 +144,9 @@
         <LinearLayout
             android:id="@+id/notificationTone"
             style="@style/SettingsRow"
-            android:background="@drawable/white_card_bg">
+            android:background="@drawable/white_card_bg"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
 
             <ImageView
                 android:src="@drawable/ic_bell"
@@ -164,7 +172,9 @@
         <LinearLayout
             android:id="@+id/recurringReminder"
             style="@style/SettingsRow"
-            android:background="@drawable/white_card_bg">
+            android:background="@drawable/white_card_bg"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
 
             <ImageView
                 android:src="@drawable/ic_repeat"
@@ -201,7 +211,9 @@
         <LinearLayout
             android:id="@+id/helpFaq"
             style="@style/SettingsRow"
-            android:background="@drawable/white_card_bg">
+            android:background="@drawable/white_card_bg"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
 
             <ImageView
                 android:src="@drawable/ic_help"
@@ -226,7 +238,9 @@
         <LinearLayout
             android:id="@+id/contactSupport"
             style="@style/SettingsRow"
-            android:background="@drawable/white_card_bg">
+            android:background="@drawable/white_card_bg"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
 
             <ImageView
                 android:src="@drawable/ic_email"
