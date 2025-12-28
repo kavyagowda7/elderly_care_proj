@@ -42,6 +42,30 @@ public class DoctorVideoAdapter extends RecyclerView.Adapter<DoctorVideoAdapter.
                 .inflate(R.layout.item_doctor_video, parent, false));
     }
 
+    private boolean isAppointmentExpired(String date) {
+        try {
+            // date format: yyyy-MM-dd
+            java.text.SimpleDateFormat sdf =
+                    new java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.getDefault());
+
+            java.util.Date apptDate = sdf.parse(date);
+
+            java.util.Calendar endOfDay = java.util.Calendar.getInstance();
+            endOfDay.setTime(apptDate);
+            endOfDay.set(java.util.Calendar.HOUR_OF_DAY, 23);
+            endOfDay.set(java.util.Calendar.MINUTE, 59);
+            endOfDay.set(java.util.Calendar.SECOND, 59);
+
+            return new java.util.Date().after(endOfDay.getTime());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+
+
     @Override
     public void onBindViewHolder(@NonNull Holder h, int pos) {
 
@@ -51,19 +75,41 @@ public class DoctorVideoAdapter extends RecyclerView.Adapter<DoctorVideoAdapter.
         h.tvTime.setText(m.date + " at " + m.time);
         h.tvInitial.setText(m.patientName.substring(0, 1).toUpperCase());
 
-        h.btnJoin.setText("Start Call");
+        boolean expired = isAppointmentExpired(m.date);
 
-        h.btnJoin.setOnClickListener(v -> {
+        if (expired) {
+            // Appointment expired
+            h.btnJoin.setEnabled(false);
+            h.btnJoin.setAlpha(0.4f);
+            h.btnJoin.setText("Expired");
 
-            // ⭐ Doctor should NOT generate roomId here anymore
+            // optional: update status once
+            if (!"expired".equalsIgnoreCase(m.status)) {
+                FirebaseDatabase.getInstance(
+                                "https://elderlycare-7fc2a-default-rtdb.asia-southeast1.firebasedatabase.app/")
+                        .getReference("appointments")
+                        .child(m.doctorUid)
+                        .child(m.appointmentId)
+                        .child("status")
+                        .setValue("expired");
+            }
 
-            sendBackendVideoNotification(
-                    m.patientUid,
-                    m.doctorUid,
-                    m.appointmentId
-            );
-        });
+        } else {
+            //Appointment valid
+            h.btnJoin.setEnabled(true);
+            h.btnJoin.setAlpha(1f);
+            h.btnJoin.setText("Start Call");
+
+            h.btnJoin.setOnClickListener(v -> {
+                sendBackendVideoNotification(
+                        m.patientUid,
+                        m.doctorUid,
+                        m.appointmentId
+                );
+            });
+        }
     }
+
 
     // ⭐ NEW FIXED METHOD — Backend generates roomId
     private void sendBackendVideoNotification(String patientUid, String doctorUid, String appointmentId) {
